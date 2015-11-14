@@ -1,3 +1,5 @@
+[Snake Game!](http://dmitry1007.github.io/snake-time/)
+
 # Game Time Starter Kit
 
 To install the dependencies:
