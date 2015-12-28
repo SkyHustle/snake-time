@@ -44,6 +44,16 @@ header {
   text-align: center;
 }
 
+#canvas-holder {
+  position: relative;
+  width: 90vw;
+}
+
+#canvas {
+  width: 100%;
+  margin-left: 5%;
+}
+
 #overlay {
      visibility: hidden;
      position: absolute;
