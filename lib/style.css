@@ -9,27 +9,39 @@ body {
     padding: 0px;
 }
 
+@media screen and (min-width: 992px) {
+  .container {
+
+  }
+}
+
 canvas {
     border: 2px solid green;
     background-color: black;
 }
 
 #title {
-  display: inline-block;
-  text-align: left;
-  font-family: fantasy;
   font-weight: bolder;
   color: orange;
+  display: inline;
 }
 
 #score {
-  width: 50%;
-  display: inline;
-  text-align: center;
-  font-family: fantasy;
   font-weight: bolder;
   color: brown;
-  padding-left: 5%;
+  display: inline;
+  margin: 5%;
+}
+
+#github {
+  color: brown;
+  display: inline;
+}
+
+header {
+  font-family: fantasy;
+  font-weight: bolder;
+  text-align: center;
 }
 
 #overlay {
