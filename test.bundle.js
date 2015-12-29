@@ -71,8 +71,8 @@
 	  this.board = board;
 	  this.x = x;
 	  this.y = y;
-	  this.width = 10;
-	  this.height = 10;
+	  this.width = 20;
+	  this.height = 20;
 	}
 
 	Block.prototype.draw = function (context) {
@@ -82,14 +82,6 @@
 	  context.fillStyle = 'orange';
 	  context.fill();
 	  return this;
-	};
-
-	Block.prototype.blockBelow = function () {
-	  return this.board.findBlock(this.x, this.y + 1);
-	};
-
-	Block.prototype.blockToTheRight = function () {
-	  return this.board.findBlock(this.x + 1, this.y);
 	};
 
 	module.exports = { Block: Block };
@@ -147,19 +139,17 @@
 	var Board = __webpack_require__(4).Board;
 	var Snake = __webpack_require__(6).Snake;
 
-	//image = 'mouse.png';
-
 	function Food(board) {
 	  this.board = board;
-	  this.width = 10;
-	  this.height = 10;
+	  this.width = 20;
+	  this.height = 20;
 	  this.setRandomPosition();
 	  this.board.addFood(this);
 	}
 
 	Food.prototype.draw = function (context) {
 	  context.beginPath();
-	  context.arc(this.x, this.y, 6, 0, 2 * Math.PI, false);
+	  context.arc(this.x, this.y, 10, 0, 2 * Math.PI, false);
 	  context.lineWidth = 2;
 	  context.fillStyle = 'green';
 	  context.fill();
@@ -167,7 +157,7 @@
 	};
 
 	Food.prototype.setRandomPosition = function () {
-	  this.x = Math.floor(Math.random() * 560 - 20 + 20);
+	  this.x = Math.floor(Math.random() * 260 - 20 + 20);
 	  this.y = Math.floor(Math.random() * 260 - 20 + 20);
 	};
 
@@ -189,7 +179,7 @@
 
 	function Snake(board) {
 	    this.board = board;
-	    this.body = [new Block(board, 40, 40)];
+	    this.body = [new Block(board, 20, 20)];
 	    this.head = this.body[0];
 	    this.board.blocks.push(this.head);
 	    this.velocity = 3;
@@ -253,19 +243,19 @@
 	};
 
 	Snake.prototype.blockToTheLeft = function () {
-	    return !!this.board.findBlock(this.head.x - 2, this.head.y);
+	    return !!this.board.findBlock(this.head.x - 3, this.head.y);
 	};
 
 	Snake.prototype.blockToTheRight = function () {
-	    return !!this.board.findBlock(this.head.x + 2, this.head.y);
+	    return !!this.board.findBlock(this.head.x + 3, this.head.y);
 	};
 
 	Snake.prototype.blockOnTop = function () {
-	    return !!this.board.findBlock(this.head.x, this.head.y - 2);
+	    return !!this.board.findBlock(this.head.x, this.head.y - 3);
 	};
 
 	Snake.prototype.blockBelow = function () {
-	    return !!this.board.findBlock(this.head.x, this.head.y + 2);
+	    return !!this.board.findBlock(this.head.x, this.head.y + 3);
 	};
 
 	Snake.prototype.draw = function () {
@@ -314,7 +304,7 @@
 	    var xDiff = Math.abs(this.head.x - this.board.food[0].x);
 	    var yDiff = Math.abs(this.head.y - this.board.food[0].y);
 
-	    if (xDiff < 10 && yDiff < 10) {
+	    if (xDiff < 15 && yDiff < 15) {
 	        for (var i = 0; i < 15; i++) {
 	            this.eat(new Block(this.board, this.body[0].x, this.body[0].y));
 	        }

@@ -3,20 +3,9 @@ body {
   background-color: black;
 }
 
-.container {
-    color: #44ff24;
-    border: 3px solid orange;
-    padding: 0px;
-}
-
-@media screen and (min-width: 992px) {
-  .container {
-
-  }
-}
 
 canvas {
-    border: 2px solid green;
+    border: 3px solid orange;
     background-color: black;
 }
 
@@ -30,7 +19,7 @@ canvas {
   font-weight: bolder;
   color: brown;
   display: inline;
-  margin: 5%;
+  margin: 4%;
 }
 
 #github {
@@ -66,21 +55,29 @@ header {
 }
 
 #overlay div {
-     width:300px;
+     width: 400px;
      margin: 100px auto;
      background-color: black;
-     border:1px solid orange;
-     padding:15px;
-     text-align:center;
+     border: 3px solid orange;
+     padding: 15px;
+     text-align: center;
+     font-size: xx-large;
 }
 
 #play-again {
   background-color: orange;
   font-family: monospace;
   font-weight: bolder;
+  font-size: x-large;
 }
 
 h2 {
   font-family: monospace;
   color: red;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    font-size: x-large;
+  }
 }
