@@ -31,6 +31,7 @@ header {
   font-family: fantasy;
   font-weight: bolder;
   text-align: center;
+  font-size: 1.1em;
 }
 
 #canvas-holder {
@@ -76,8 +77,8 @@ h2 {
   color: red;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   header {
-    font-size: x-large;
+    font-size:;
   }
 }

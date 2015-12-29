@@ -71,8 +71,8 @@
 	  this.board = board;
 	  this.x = x;
 	  this.y = y;
-	  this.width = 20;
-	  this.height = 20;
+	  this.width = 30;
+	  this.height = 30;
 	}
 
 	Block.prototype.draw = function (context) {
@@ -141,8 +141,8 @@
 
 	function Food(board) {
 	  this.board = board;
-	  this.width = 20;
-	  this.height = 20;
+	  this.width = 30;
+	  this.height = 30;
 	  this.setRandomPosition();
 	  this.board.addFood(this);
 	}
@@ -157,8 +157,8 @@
 	};
 
 	Food.prototype.setRandomPosition = function () {
-	  this.x = Math.floor(Math.random() * 260 - 20 + 20);
-	  this.y = Math.floor(Math.random() * 260 - 20 + 20);
+	  this.x = Math.floor(Math.random() * this.board.columns - 20 + 20);
+	  this.y = Math.floor(Math.random() * this.board.rows - 20 + 20);
 	};
 
 	Food.prototype.wasEaten = function () {
@@ -182,7 +182,7 @@
 	    this.body = [new Block(board, 20, 20)];
 	    this.head = this.body[0];
 	    this.board.blocks.push(this.head);
-	    this.velocity = 3;
+	    this.velocity = 5;
 	    return this;
 	}
 
@@ -243,19 +243,19 @@
 	};
 
 	Snake.prototype.blockToTheLeft = function () {
-	    return !!this.board.findBlock(this.head.x - 3, this.head.y);
+	    return !!this.board.findBlock(this.head.x - 5, this.head.y);
 	};
 
 	Snake.prototype.blockToTheRight = function () {
-	    return !!this.board.findBlock(this.head.x + 3, this.head.y);
+	    return !!this.board.findBlock(this.head.x + 5, this.head.y);
 	};
 
 	Snake.prototype.blockOnTop = function () {
-	    return !!this.board.findBlock(this.head.x, this.head.y - 3);
+	    return !!this.board.findBlock(this.head.x, this.head.y - 5);
 	};
 
 	Snake.prototype.blockBelow = function () {
-	    return !!this.board.findBlock(this.head.x, this.head.y + 3);
+	    return !!this.board.findBlock(this.head.x, this.head.y + 5);
 	};
 
 	Snake.prototype.draw = function () {
@@ -304,7 +304,7 @@
 	    var xDiff = Math.abs(this.head.x - this.board.food[0].x);
 	    var yDiff = Math.abs(this.head.y - this.board.food[0].y);
 
-	    if (xDiff < 15 && yDiff < 15) {
+	    if (xDiff < 20 && yDiff < 20) {
 	        for (var i = 0; i < 15; i++) {
 	            this.eat(new Block(this.board, this.body[0].x, this.body[0].y));
 	        }
