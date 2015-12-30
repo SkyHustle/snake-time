@@ -34,7 +34,7 @@ header {
   font-size: 1.1em;
 }
 
-#canvas-holder {
+.canvas-frame {
   position: relative;
   width: 90vw;
 }
@@ -81,4 +81,41 @@ h2 {
   header {
     font-size: x-small;
   }
+}
+
+######################################
+
+.clear
+{
+  clear:both;
+}
+
+.box
+{
+  margin-top:20px;
+  margin-bottom:20px;
+  max-width:768px;
+  height:300px;
+
+  padding: 10px;
+  background-color: #EEE;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+
+  text-align:center;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 36px;
+
+  overflow:hidden;
+}
+
+h4
+{
+  margin-top:0px;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 300;
+  color:red;
 }
