@@ -79,21 +79,29 @@ h2 {
   color: red;
 }
 
-button {
-  height: 48px;
-  width: 68px;
-  border: 2px solid orange;
-  background-color: black;
-  margin-top: 2%;
-}
-
-i.fa {
-  font-size: large;
-  color: orange;
+.control-buttons {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
   header {
     font-size: x-small;
+  }
+
+  .control-buttons {
+    display: inline;
+  }
+
+  button {
+    height: 48px;
+    width: 68px;
+    border: 2px solid orange;
+    background-color: black;
+    margin-top: 2%;
+  }
+
+  i.fa {
+    font-size: large;
+    color: orange;
   }
 }
