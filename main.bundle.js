@@ -82,7 +82,8 @@
 	  window.location.reload();
 	});
 
-	$('button').on("tap", function () {
+	$('button').on("touchend", function () {
+	  console.log("touch ended");
 	  Direction = this.id;
 	});
 
