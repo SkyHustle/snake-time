@@ -78,11 +78,11 @@
 	  el.style.visibility = el.style.visibility == "visible" ? "hidden" : "visible";
 	}
 
-	$('#play-again').click(function () {
+	$('#play-again').on("click", function () {
 	  window.location.reload();
 	});
 
-	$('button').click(function () {
+	$('button').on("tap", function () {
 	  Direction = this.id;
 	});
 
