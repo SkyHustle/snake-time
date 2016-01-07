@@ -104,4 +104,9 @@ h2 {
     font-size: large;
     color: orange;
   }
+
+  .clicked_button, .clicked_button i.fa {
+    background-color: orange;
+    color: black;
+  }
 }

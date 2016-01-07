@@ -73,17 +73,20 @@
 	var food = new Food(board);
 
 	function overlay() {
-	  canvas.style.display = "none";
-	  var el = document.getElementById("overlay");
-	  el.style.visibility = el.style.visibility == "visible" ? "hidden" : "visible";
+	  canvas.style.display = 'none';
+	  var el = document.getElementById('overlay');
+	  el.style.visibility = el.style.visibility == 'visible' ? 'hidden' : 'visible';
 	}
 
-	$('#play-again').on("click", function () {
+	$('#play-again').on('click', function () {
 	  window.location.reload();
 	});
 
-	$('button').on("touchend", function () {
-	  console.log("touch ended");
+	$('button').on('touchend', function () {
+	  $(this).addClass("clicked_button").delay(500).queue(function (next) {
+	    $(this).removeClass("clicked_button");
+	    next();
+	  });
 	  Direction = this.id;
 	});
 
