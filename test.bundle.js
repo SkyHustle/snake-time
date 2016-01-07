@@ -186,22 +186,22 @@
 	}
 
 	Snake.prototype.move = function (direction) {
-	    if (direction === '38' || direction === 'up') {
+	    if (direction === '38') {
 	        //up
 	        if (this.canMoveDown()) {
 	            this.moveOnYAxis(this.velocity * -1);
 	        }
-	    } else if (direction === '40' || direction === 'down') {
+	    } else if (direction === '40') {
 	        //down
 	        if (this.canMoveUp()) {
 	            this.moveOnYAxis(this.velocity);
 	        }
-	    } else if (direction === '37' || direction === 'left') {
+	    } else if (direction === '37') {
 	        //left
 	        if (this.canMoveLeft()) {
 	            this.moveOnXAxis(this.velocity * -1);
 	        }
-	    } else if (direction === '39' || direction === 'right') {
+	    } else if (direction === '39') {
 	        //right
 	        if (this.canMoveRight()) {
 	            this.moveOnXAxis(this.velocity);
@@ -210,13 +210,13 @@
 	};
 
 	Snake.prototype.collisionWithSelf = function (direction) {
-	    if (direction === '39' && this.blockToTheRight() || direction === 'right' && this.blockToTheRight()) {
+	    if (direction === '39' && this.blockToTheRight()) {
 	        return true;
-	    } else if (direction === '37' && this.blockToTheLeft() || direction === 'left' && this.blockToTheLeft()) {
+	    } else if (direction === '37' && this.blockToTheLeft()) {
 	        return true;
-	    } else if (direction === '38' && this.blockOnTop() || direction === 'up' && this.blockOnTop()) {
+	    } else if (direction === '38' && this.blockOnTop()) {
 	        return true;
-	    } else if (direction === '40' && this.blockBelow() || direction === 'down' && this.blockBelow()) {
+	    } else if (direction === '40' && this.blockBelow()) {
 	        return true;
 	    }
 	};
