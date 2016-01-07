@@ -90,6 +90,14 @@
 	  Direction = this.id;
 	});
 
+	window.addEventListener('orientationchange', function () {
+	  var originalBodyStyle = getComputedStyle(document.body).getPropertyValue('display');
+	  document.body.style.display = 'none';
+	  setTimeout(function () {
+	    document.body.style.display = originalBodyStyle;
+	  }, 10);
+	});
+
 	var Direction = 0;
 
 	requestAnimationFrame(function gameLoop() {
