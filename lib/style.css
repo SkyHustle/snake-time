@@ -83,7 +83,7 @@ h2 {
   display: none;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   header {
     font-size: x-small;
   }
@@ -108,5 +108,50 @@ h2 {
   .clicked_button, .clicked_button i.fa {
     background-color: orange;
     color: black;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  header {
+    font-size: x-small;
+  }
+
+  button {
+    height: 68px;
+    width: 72px;
+    border: 2px solid orange;
+    background-color: black;
+    margin-top: 2%;
+  }
+
+  i.fa {
+    font-size: large;
+    color: orange;
+  }
+
+  .clicked_button, .clicked_button i.fa {
+    background-color: orange;
+    color: black;
+  }
+
+  .game-container {
+    text-align: left;
+  }
+
+  .control-buttons {
+    text-align: center;
+    display: inline-block;
+    float: right;
+    margin-top: 10%;
+  }
+
+  .canvas-frame {
+    width: 65vw;
+    display: inline-block;
+  }
+
+  #canvas {
+    margin-left: 3%;
+    width: 95%;
   }
 }
