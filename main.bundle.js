@@ -233,7 +233,7 @@
 
 	function Snake(board) {
 	    this.board = board;
-	    this.body = [new Block(board, 20, 20)];
+	    this.body = [new Block(board, 200, 200)];
 	    this.head = this.body[0];
 	    this.board.blocks.push(this.head);
 	    this.velocity = 5;
