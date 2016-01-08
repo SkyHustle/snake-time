@@ -73,7 +73,7 @@
 	var food = new Food(board);
 
 	function overlay() {
-	  canvas.style.display = 'none';
+	  $('.game-container, header').hide();
 	  var el = document.getElementById('overlay');
 	  el.style.visibility = el.style.visibility == 'visible' ? 'hidden' : 'visible';
 	}
