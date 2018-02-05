@@ -9560,8 +9560,8 @@
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
-		module.hot.accept("!!/Users/Dmitry/turing4/snake-time/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/Dmitry/turing4/snake-time/node_modules/mocha/mocha.css", function() {
-			var newContent = require("!!/Users/Dmitry/turing4/snake-time/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/Dmitry/turing4/snake-time/node_modules/mocha/mocha.css");
+		module.hot.accept("!!/Users/Dmitry/snake-time/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/Dmitry/snake-time/node_modules/mocha/mocha.css", function() {
+			var newContent = require("!!/Users/Dmitry/snake-time/node_modules/mocha-loader/node_modules/css-loader/index.js!/Users/Dmitry/snake-time/node_modules/mocha/mocha.css");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});

@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
-    "jquery": "^2.1.4",
+    "jquery": "^3.0.0",
     "jquery-touchswipe": "^1.6.15",
     "swipe-js": "^2.2.0"
   }
